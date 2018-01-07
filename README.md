@@ -11,7 +11,7 @@ The algorithm works as follows:
 - Then we skip 2 lines (column headers), following which the 32 lines of relevant numerical force information is read in and stored.
 - Finally, we hit the end of the data block after 32 lines, which is identified by the stop pattern: ```MD/MSC/NX NASTRAN```. The exact text here depends on the type of analysis that output the data, and the exact flavor of NASTRAN used. The regex aims to generalize this information as best possible. 
 - The data block that is stored in memory is then written to a file.
-- The next data block is idenditied the same way, and appended to the already open write file.
+- The next data block is identified the same way, and appended to the already open write file.
 - The subcase number is tracked along with the data blocks.
 
 The above approach makes it possible to parse through a very large text file, and store thousands of elements' worth of force data and perform custom calculations on them.
