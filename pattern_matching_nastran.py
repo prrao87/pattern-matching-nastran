@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Script to extract relevant numerical data blocks from a large text file.
 Uses pattern matching with regular expressions.
